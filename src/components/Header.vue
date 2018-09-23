@@ -7,9 +7,11 @@
 <script>
 import { mapGetters } from 'vuex';
 
+const computed = mapGetters('cart', ['totalCount', 'totalPrice']);
+
 export default {
   name: 'Header',
-  computed: mapGetters('cart', ['totalCount', 'totalPrice']),
+  computed,
 };
 </script>
 

@@ -1,20 +1,21 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import product from '../../api/product';
+import productApi from '../../api/productApi';
 
 Vue.use(Vuex);
 
 const setProducts = (state, payload) => state.products = payload;
 
-const getProducts = ({ commit }) => {
-  const response = res => commit('setProducts', res.data);
-  const error = e => console.log(e);
+const error = e => console.log(e);
 
-  product
-    .getProducts()
-    .then(response)
+const response = commit =>
+  res => commit('setProducts', res.data);
+
+const getProducts = ({ commit }) =>
+  productApi
+    .fetchProducts()
+    .then(response(commit))
     .catch(error);
-};
 
 const state = {
   products: [],

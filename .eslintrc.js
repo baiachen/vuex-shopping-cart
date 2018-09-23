@@ -15,6 +15,8 @@ module.exports = {
     'no-return-assign': 'off',
     'no-shadow': 'off',
     'func-names': 'off',
+    'import/prefer-default-export': 'off',
+    'space-before-function-paren': 'off',
   },
   parserOptions: {
     parser: 'babel-eslint',

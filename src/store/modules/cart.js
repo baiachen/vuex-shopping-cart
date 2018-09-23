@@ -9,8 +9,8 @@ const reducer = (acc, product) => acc + product.price;
 
 const totalPrice = state => state.cart.reduce(reducer, 0);
 
-const isInCart = state => product =>
-  state.cart.findIndex(({ id }) => (id === product.id)) !== -1;
+const isInCart = state =>
+  product => state.cart.findIndex(({ id }) => (id === product.id)) !== -1;
 
 const addToCart = (state, payload) => state.cart = [...state.cart, payload];
 

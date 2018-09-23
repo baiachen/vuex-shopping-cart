@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Macbook Pro 2018",
+      "price": 89900
+    },
+    {
+      "id": 2,
+      "title": "iPhone XS",
+      "price": 39900
+    },
+    {
+      "id": 3,
+      "title": "iPad",
+      "price": 10900
+    }
+  ]
+}
